@@ -7,6 +7,11 @@ The core idea is to retrieve a moment on a two-dimensional temporal map, which c
 2D-TAN is capable of encoding adjacent temporal relation, while learning discriminative feature for matching video moments with referring expressions. 
 Our model is  simple  in  design  and  achieves  competitive  performance in  comparison  with  the  state-of-the-art  methods  on  three benchmark datasets.
 
+[Arxiv Preprint](https://arxiv.org/abs/1912.03590)
+
+## News
+We extend our 2D-TAN approach to the temporal action localization task and win the **1st** place in [HACS Temporal Action Localization Challenge](http://hacs.csail.mit.edu/challenge.html) at [ICCV 2019](iccv2019.thecvf.com). For more details please refer to our [technical report](https://arxiv.org/abs/1912.03612).
+
 ## Framework
 ![alt text](imgs/pipeline.jpg)
 
