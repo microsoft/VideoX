@@ -10,6 +10,7 @@ Our model is  simple  in  design  and  achieves  competitive  performance in  co
 [Arxiv Preprint](https://arxiv.org/abs/1912.03590)
 
 ## News
+- :trophy: Our paper was accepted by AAAI-2020. [Arxiv Preprint](https://arxiv.org/abs/1912.03590)
 - :trophy: We extend our 2D-TAN approach to the temporal action localization task and win the **1st** place in [HACS Temporal Action Localization Challenge](http://hacs.csail.mit.edu/challenge.html) at [ICCV 2019](iccv2019.thecvf.com). For more details please refer to our [technical report](https://arxiv.org/abs/1912.03612).
 
 ## Framework
