@@ -45,7 +45,7 @@ We extend our 2D-TAN approach to the temporal action localization task and win t
 
 ## Quick Start
 
-Please download the visual features from [onedrive](https://uofr-my.sharepoint.com/:f:/g/personal/szhang83_ur_rochester_edu/Et2UAFYHntBFtOydywVgoYIBFacOq13qjKHF6rZvQ2bldg?e=QFvqbG) and save it to the `data/` folder. 
+Please download the visual features from [google drive](https://drive.google.com/open?id=12Na79RmvQyy7cclUDwQdYHcjpuvWD42a) and save it to the `data/` folder. 
 
 #### Training
 Use the following commands for training:
@@ -67,7 +67,7 @@ python moment_localization/train.py --cfg experiments/tacos/2D-TAN-128x128-K5L8-
 ```
 
 #### Testing
-Our trained model are provided in [onedrive](https://uofr-my.sharepoint.com/:f:/g/personal/szhang83_ur_rochester_edu/Emi09jdg3E9Iuj3UqiyYnjEBR0VNIsgaae9PiJUlzmKeuQ?e=FOQQbC). Please download them to the `checkpoints` folder.
+Our trained model are provided in [google drive](https://drive.google.com/drive/folders/1YigxAIpjWURdWtfFJHp6sU0c3PIzLN19?usp=sharing). Please download them to the `checkpoints` folder.
 Then, run the following commands for evaluation: 
 ```
 # Evaluate "Pool" in Table 1
