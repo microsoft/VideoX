@@ -3,7 +3,6 @@ import os
 from tqdm import tqdm
 import glob
 import numpy as np
-import json
 
 if __name__ == '__main__':
     data_root = "."
@@ -19,7 +18,7 @@ if __name__ == '__main__':
         if vid not in valid_vids:
             continue
         feats = []
-        for txt_path in glob.glob(os.path.join(vid_path,'*')):
+        for txt_path in sorted(glob.glob(os.path.join(vid_path,'*'))):
             with open(txt_path) as txt_file:
                 line = txt_file.readline()
                 feat = [float(i) for i in line.split(' ')]
