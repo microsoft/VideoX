@@ -18,11 +18,14 @@ Our model is  simple  in  design  and  achieves  competitive  performance in  co
 
 ## Main Results
 
-#### Main results on Charades-STA 
+#### Main results on Charades-STA
 | Method | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
 | ---- |:-------------:| :-----:|:-----:|:-----:|
-| Pool | 39.70 | 23.31 | 80.32 | 51.26 |
-| Conv | 39.81 | 23.25 | 79.33 | 52.15 |
+| Pool | 40.94 | 22.85 | 83.84 | 50.35 |
+| Conv | 42.80 | 23.25 | 80.54 | 54.14 |
+
+I fixed a bug for loading charades visual features, the updated performance is listed above.
+Please use these results when comparing with our AAAI paper. 
 
 #### Main results on ActivityNet Captions 
 | Method | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 | Rank5@0.5 | Rank5@0.7 |
@@ -46,7 +49,8 @@ Our model is  simple  in  design  and  achieves  competitive  performance in  co
 
 ## Quick Start
 
-Please download the visual features from [google drive](https://drive.google.com/open?id=12Na79RmvQyy7cclUDwQdYHcjpuvWD42a) and save it to the `data/` folder. 
+Please download the visual features from [google drive](https://drive.google.com/drive/folders/1D3nav3TKZmYNHvSLBgDt1vpBUXoV2MRv?usp=sharing) and save it to the `data/` folder. 
+
 
 #### Training
 Use the following commands for training:
@@ -68,7 +72,8 @@ python moment_localization/train.py --cfg experiments/tacos/2D-TAN-128x128-K5L8-
 ```
 
 #### Testing
-Our trained model are provided in [google drive](https://drive.google.com/drive/folders/1YigxAIpjWURdWtfFJHp6sU0c3PIzLN19?usp=sharing). Please download them to the `checkpoints` folder.
+Our trained model are provided in [google drive](https://drive.google.com/drive/folders/1RJGhOsTrGELgs9PJZoIUU9l95mXI6TON?usp=sharing). Please download them to the `checkpoints` folder.
+
 Then, run the following commands for evaluation: 
 ```
 # Evaluate "Pool" in Table 1
