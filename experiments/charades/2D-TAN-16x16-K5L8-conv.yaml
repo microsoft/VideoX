@@ -79,4 +79,4 @@ TAN:
 
 MODEL:
   NAME: TAN
-  CHECKPOINT: ./checkpoints/Charades/iter003483-0.3981-0.7933.pkl
+  CHECKPOINT: ./checkpoints/Charades/iter005418-0.4277-0.8062.pkl
