@@ -98,7 +98,7 @@ If any part of our paper and code is helpful to your work, please generously cit
 @InProceedings{2DTAN_2020_AAAI,
 author = {Zhang, Songyang and Peng, Houwen and Fu, Jianlong and Luo, Jiebo},
 title = {Learning 2D Temporal Adjacent Networks forMoment Localization with Natural Language},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (AAAI)},
+booktitle = {AAAI},
 year = {2020}
 } 
 ```
