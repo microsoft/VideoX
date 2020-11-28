@@ -9,6 +9,7 @@ Our model is  simple  in  design  and  achieves  competitive  performance in  co
 
 [Arxiv Preprint](https://arxiv.org/abs/1912.03590)
 
+**For journal reviewers: please switch to ``journal`` branch.**
 ## News
 - :wrench: A third-party [optimized implementation](https://github.com/ChenJoya/2dtan) by @ChenJoya.
 - :sunny: Our paper was accepted by AAAI-2020. [Arxiv Preprint](https://arxiv.org/abs/1912.03590)
