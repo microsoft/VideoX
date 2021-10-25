@@ -9,7 +9,7 @@ Our model is  simple  in  design  and  achieves  competitive  performance in  co
 
 [Arxiv Preprint](https://arxiv.org/abs/1912.03590)
 
-**The code for our our MS-2D-TAN approach is in the `ms-2d-tan` branch.**
+**Please check the `ms-2d-tan` branch for our TPAMI extension.**
 
 ## News
 - :beers: Our journal extension is accepted by TPAMI.
