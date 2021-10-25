@@ -1,48 +1,42 @@
-# 2D-TAN
+# MS-2D-TAN
 
-we are hiring talented interns: houwen.peng@microsoft.com
-
-In  this  paper,  we  study  the  problem  of  moment  localization  with  natural  language,  and  propose  a  novel  2D  Temporal Adjacent Networks(2D-TAN) method. 
-The core idea is to retrieve a moment on a two-dimensional temporal map, which considers adjacent moment candidates as the temporal context. 
-2D-TAN is capable of encoding adjacent temporal relation, while learning discriminative feature for matching video moments with referring expressions. 
+In  this  paper,  we  study  the  problem  of  moment  localization  with  natural  language,  and  propose  a  extend our previous proposed  2D-TAN method to a multi-scale version. 
+The core idea is to retrieve a moment from two-dimensional temporal maps at different temporal scales, which considers adjacent moment candidates as the temporal context. 
+The extended version is capable of encoding adjacent temporal relation at different scales, while learning discriminative features for matching video moments with referring expressions. 
 Our model is  simple  in  design  and  achieves  competitive  performance in  comparison  with  the  state-of-the-art  methods  on  three benchmark datasets.
 
-[Arxiv Preprint](https://arxiv.org/abs/1912.03590)
-
-**For journal reviewers: please download and unzip ``journal.zip``. The password is the manuscript id of our submission.**
-## News
-- :wrench: A third-party [optimized implementation](https://github.com/ChenJoya/2dtan) by @ChenJoya.
-- :sunny: Our paper was accepted by AAAI-2020. [Arxiv Preprint](https://arxiv.org/abs/1912.03590)
-- :trophy: We extend our 2D-TAN approach to the temporal action localization task and win the **1st** place in [HACS Temporal Action Localization Challenge](http://hacs.csail.mit.edu/challenge.html) at [ICCV 2019](iccv2019.thecvf.com). For more details please refer to our [technical report](https://arxiv.org/abs/1912.03612).
-
 ## Framework
-![alt text](imgs/pipeline.jpg)
+![alt text](pipeline.jpg)
 
 ## Main Results
 
-#### Main results on Charades-STA
-| Method | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
+### Main results on Charades-STA 
+| Feature | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 |
 | ---- |:-------------:| :-----:|:-----:|:-----:|
-| Pool | 40.94 | 22.85 | 83.84 | 50.35 |
-| Conv | 42.80 | 23.25 | 80.54 | 54.14 |
+| VGG | 45.65 | 27.20 | 85.91 | 57.61 |
+| C3D | 41.10 | 23.25 | 81.53 | 48.55 |
+| I3D | 56.64 | 36.21 | 89.14 | 61.13 |
+| I3D* | 60.08 | 37.39 | 89.06 | 59.17 |
 
-I fixed a bug for loading charades visual features, the updated performance is listed above.
-Please use these results when comparing with our AAAI paper. 
+(I3D* represents I3D features finetuned on Charades)
 
-#### Main results on ActivityNet Captions 
-| Method | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 | Rank5@0.5 | Rank5@0.7 |
+
+
+### Main results on ActivityNet Captions 
+| Feature | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 | Rank5@0.5 | Rank5@0.7 |
 | ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|
-| Pool | 59.45 | 44.51 | 26.54 | 85.53 | 77.13 | 61.96 |
-| Conv | 58.75 | 44.05 | 27.38 | 85.65 | 76.65 | 62.26 |
+| C3D | 61.04  | 46.16  | 29.21  | 87.31  | 78.80  | 60.85 |
+| I3D | 62.09  | 45.50  | 28.28  | 87.61  | 79.36  | 61.70 |
 
-#### Main results on TACoS
-| Method | Rank1@0.1 | Rank1@0.3 | Rank1@0.5 | Rank5@0.1 | Rank5@0.3 | Rank5@0.5 |
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|
-| Pool | 47.59 | 37.29 | 25.32 | 70.31 | 57.81 | 45.04 |
-| Conv | 46.39 | 35.17 | 25.17 | 74.46 | 56.99 | 44.24 |
+### Main results on TACoS
+| Feature | Rank1@0.1 | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.1 | Rank5@0.3 | Rank5@0.5 | Rank5@0.7 |
+| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| VGG | 50.64  | 43.31  | 35.27  | 23.54  | 78.31  | 66.18  | 55.81  | 38.09 |
+| C3D | 49.24  | 41.74  | 34.29  | 21.54  | 78.33  | 67.01  | 56.76  | 36.84 |
+| I3D | 48.66  | 41.96  | 33.59  | 22.14  | 75.96  | 64.93  | 53.44  | 36.12 |
 
 ## Prerequisites
-- pytorch 1.1.0
+- pytorch 1.4.0
 - python 3.7
 - torchtext
 - easydict
@@ -51,56 +45,73 @@ Please use these results when comparing with our AAAI paper.
 
 ## Quick Start
 
-Please download the visual features from [box drive](https://rochester.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav) and save it to the `data/` folder. 
+### Download Datasets
 
+Please download the data from [box](https://rochester.box.com/s/swu6rlqcdlebvwml8dyescmi7ra0owc5) and save it to the `data` folder. 
 
-#### Training
-Use the following commands for training:
+### Training
+Run the following commands for training:
+#### Table 1
 ```
-# Evaluate "Pool" in Table 1
-python moment_localization/train.py --cfg experiments/charades/2D-TAN-16x16-K5L8-pool.yaml --verbose
-# Evaluate "Conv" in Table 1
-python moment_localization/train.py --cfg experiments/charades/2D-TAN-16x16-K5L8-conv.yaml --verbose
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-VGG.yaml --verbose
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-C3D.yaml --verbose
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-I3D.yaml --verbose
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-I3D-Finetuned.yaml --verbose
+```
+#### Table 2
+```
+python moment_localization/run.py --cfg experiments/activitynet/MS-2D-TAN-G-C3D.yaml --verbose
+python moment_localization/run.py --cfg experiments/activitynet/MS-2D-TAN-G-I3D.yaml --verbose
+```
+#### Table 3
 
-# Evaluate "Pool" in Table 2
-python moment_localization/train.py --cfg experiments/activitynet/2D-TAN-64x64-K9L4-pool.yaml --verbose
-# Evaluate "Conv" in Table 2
-python moment_localization/train.py --cfg experiments/activitynet/2D-TAN-64x64-K9L4-conv.yaml --verbose
-
-# Evaluate "Pool" in Table 3
-python moment_localization/train.py --cfg experiments/tacos/2D-TAN-128x128-K5L8-pool.yaml --verbose
-# Evaluate "Conv" in Table 3
-python moment_localization/train.py --cfg experiments/tacos/2D-TAN-128x128-K5L8-conv.yaml --verbose
+```
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-VGG.yaml --verbose
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-C3D.yaml --verbose
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D.yaml --verbose
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-C3D-H512N512K5A8k9L2.yaml --verbose
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D-H512N512K5A8k9L2.yaml --verbose
 ```
 
-#### Testing
-Our trained model are provided in [box drive](https://rochester.box.com/s/5cfp7a5snvl9uky30bu7mn1cb381w91v). Please download them to the `checkpoints` folder.
+### Evaluation
 
-Then, run the following commands for evaluation: 
+Download all the trained model from [box](https://rochester.box.com/s/pvfgay9e90cdvke5qpktewzl99g3l8o9) and save them to the `release_checkpoints` folder.
+
+Then, run the following commands to evaluate our trained models:
+
+#### Table 1
 ```
-# Evaluate "Pool" in Table 1
-python moment_localization/test.py --cfg experiments/charades/2D-TAN-16x16-K5L8-pool.yaml --verbose --split test
-# Evaluate "Conv" in Table 1
-python moment_localization/test.py --cfg experiments/charades/2D-TAN-16x16-K5L8-conv.yaml --verbose --split test
-
-# Evaluate "Pool" in Table 2
-python moment_localization/test.py --cfg experiments/activitynet/2D-TAN-64x64-K9L4-pool.yaml --verbose --split test
-# Evaluate "Conv" in Table 2
-python moment_localization/test.py --cfg experiments/activitynet/2D-TAN-64x64-K9L4-conv.yaml --verbose --split test
-
-# Evaluate "Pool" in Table 3
-python moment_localization/test.py --cfg experiments/tacos/2D-TAN-128x128-K5L8-pool.yaml --verbose --split test
-# Evaluate "Conv" in Table 3
-python moment_localization/test.py --cfg experiments/tacos/2D-TAN-128x128-K5L8-conv.yaml --verbose --split test
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-VGG.yaml --verbose --split test --mode test
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-C3D.yaml --verbose --split test --mode test
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-I3D.yaml --verbose --split test --mode test
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-I3D-Finetuned.yaml --verbose --split test --mode test
 ```
+
+#### Table 2
+```
+python moment_localization/run.py --cfg experiments/activitynet/MS-2D-TAN-G-C3D.yaml --verbose --split test --mode test
+python moment_localization/run.py --cfg experiments/activitynet/MS-2D-TAN-G-I3D.yaml --verbose --split test --mode test
+```
+
+#### Table 3
+```
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-VGG.yaml --verbose --split test --mode test
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-C3D.yaml --verbose --split test --mode test
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D.yaml --verbose --split test --mode test
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-C3D-H512N512K5A8k9L2.yaml --verbose --split test --mode test
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D-H512N512K5A8k9L2.yaml --verbose --split test --mode test
+```
+
+
+
 
 ## Citation
 If any part of our paper and code is helpful to your work, please generously cite with:
 ```
-@InProceedings{2DTAN_2020_AAAI,
-author = {Zhang, Songyang and Peng, Houwen and Fu, Jianlong and Luo, Jiebo},
-title = {Learning 2D Temporal Adjacent Networks forMoment Localization with Natural Language},
-booktitle = {AAAI},
-year = {2020}
+@InProceedings{Zhang2021MS2DTAN,
+author = {Zhang, Songyang and Peng, Houwen and Fu, Jianlong and Lu, Yijuan and Luo, Jiebo},
+title = {Multi-Scale 2D Temporal Adjacent Networks for Moment Localization with Natural Language},
+booktitle = {TPAMI},
+year = {2021}
 } 
 ```

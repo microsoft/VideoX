@@ -5,87 +5,96 @@ from __future__ import print_function
 import yaml
 from easydict import EasyDict as edict
 
-config = edict()
+cfg = edict()
 
-config.WORKERS = 16
-config.LOG_DIR = ''
-config.MODEL_DIR = ''
-config.RESULT_DIR = ''
-config.DATA_DIR = ''
-config.VERBOSE = False
-config.TAG = ''
+cfg.WORKERS = 16
+cfg.LOG_DIR = ''
+cfg.MODEL_DIR = ''
+cfg.RESULT_DIR = ''
 
 # CUDNN related params
-config.CUDNN = edict()
-config.CUDNN.BENCHMARK = True
-config.CUDNN.DETERMINISTIC = False
-config.CUDNN.ENABLED = True
+cfg.CUDNN = edict()
+cfg.CUDNN.BENCHMARK = True
+cfg.CUDNN.DETERMINISTIC = False
+cfg.CUDNN.ENABLED = True
 
-# TAN related params
-config.TAN = edict()
-config.TAN.FRAME_MODULE = edict()
-config.TAN.FRAME_MODULE.NAME = ''
-config.TAN.FRAME_MODULE.PARAMS = None
-config.TAN.PROP_MODULE = edict()
-config.TAN.PROP_MODULE.NAME = ''
-config.TAN.PROP_MODULE.PARAMS = None
-config.TAN.FUSION_MODULE = edict()
-config.TAN.FUSION_MODULE.NAME = ''
-config.TAN.FUSION_MODULE.PARAMS = None
-config.TAN.MAP_MODULE = edict()
-config.TAN.MAP_MODULE.NAME = ''
-config.TAN.MAP_MODULE.PARAMS = None
-config.TAN.PRED_INPUT_SIZE = 512
-
-# common params for NETWORK
-config.MODEL = edict()
-config.MODEL.NAME = ''
-config.MODEL.CHECKPOINT = '' # The checkpoint for the best performance
+# grounding model related params
+cfg.MODEL = edict()
+cfg.MODEL.NAME = ''
+cfg.MODEL.PARAMS = None
+cfg.MODEL.CHECKPOINT = '' # The checkpoint for the best performance
+cfg.MODEL.CLIP_MODULE = edict()
+cfg.MODEL.CLIP_MODULE.NAME = ''
+cfg.MODEL.CLIP_MODULE.PARAMS = None
+cfg.MODEL.PROP_MODULE = edict()
+cfg.MODEL.PROP_MODULE.NAME = ''
+cfg.MODEL.PROP_MODULE.PARAMS = None
+cfg.MODEL.FUSION_MODULE = edict()
+cfg.MODEL.FUSION_MODULE.NAME = ''
+cfg.MODEL.FUSION_MODULE.PARAMS = None
+cfg.MODEL.MAP_MODULE = edict()
+cfg.MODEL.MAP_MODULE.NAME = ''
+cfg.MODEL.MAP_MODULE.PARAMS = None
+cfg.MODEL.PRED_MODULE = edict()
+cfg.MODEL.PRED_MODULE.NAME = ''
+cfg.MODEL.PRED_MODULE.PARAMS = None
 
 # DATASET related params
-config.DATASET = edict()
-config.DATASET.ROOT = ''
-config.DATASET.NAME = ''
-config.DATASET.MODALITY = ''
-config.DATASET.VIS_INPUT_TYPE = ''
-config.DATASET.NO_VAL = False
-config.DATASET.BIAS = 0
-config.DATASET.NUM_SAMPLE_CLIPS = 256
-config.DATASET.TARGET_STRIDE = 16
-config.DATASET.DOWNSAMPLING_STRIDE = 16
-config.DATASET.SPLIT = ''
-config.DATASET.NORMALIZE = False
-config.DATASET.RANDOM_SAMPLING = False
+cfg.DATASET = edict()
+cfg.DATASET.DATA_DIR = ''
+cfg.DATASET.NAME = ''
+cfg.DATASET.VIS_INPUT_TYPE = ''
+cfg.DATASET.TXT_INPUT_TYPE = ''
+cfg.DATASET.OUTPUT_TYPE = ''
+cfg.DATASET.ALIGNMENT = ''
+cfg.DATASET.NO_VAL = False
+cfg.DATASET.NO_TEST = False
+cfg.DATASET.TIME_UNIT = None
+cfg.DATASET.NUM_FRAMES = 256
+cfg.DATASET.INPUT_NUM_CLIPS = 256
+cfg.DATASET.OUTPUT_NUM_CLIPS = 16
+cfg.DATASET.INPUT_CLIP_SIZE = 16
+cfg.DATASET.OUTPUT_CLIP_SIZE = 1
+cfg.DATASET.NUM_ANCHORS = 16
+cfg.DATASET.SPLIT = ''
+cfg.DATASET.NORMALIZE = True
+cfg.DATASET.SLIDING_WINDOW = False
+cfg.DATASET.DELTA_SIZE = 1
+cfg.DATASET.QUERY_NUM_CLIPS = 8
+cfg.DATASET.FPS = 25
+cfg.DATASET.VIDEO_WINDOW_SIZE = 64
 
+# OPTIM
+cfg.OPTIM = edict()
+cfg.OPTIM.NAME = ''
+cfg.OPTIM.PARAMS = edict()
+cfg.OPTIM.SCHEDULER = edict()
+cfg.OPTIM.SCHEDULER.FACTOR = 0.5
+cfg.OPTIM.SCHEDULER.PATIENCE = 500
 # train
-config.TRAIN = edict()
-config.TRAIN.LR = 0.001
-config.TRAIN.WEIGHT_DECAY = 0
-config.TRAIN.FACTOR = 0.8
-config.TRAIN.PATIENCE = 20
-config.TRAIN.MAX_EPOCH = 20
-config.TRAIN.BATCH_SIZE = 4
-config.TRAIN.SHUFFLE = True
-config.TRAIN.CONTINUE = False
+cfg.TRAIN = edict()
+cfg.TRAIN.MAX_EPOCH = 20
+cfg.TRAIN.BATCH_SIZE = 4
+cfg.TRAIN.SHUFFLE = True
+cfg.TRAIN.CONTINUE = False
 
-config.LOSS = edict()
-config.LOSS.NAME = 'bce_loss'
-config.LOSS.PARAMS = None
+cfg.LOSS = edict()
+cfg.LOSS.NAME = 'bce_loss'
+cfg.LOSS.PARAMS = None
 
 # test
-config.TEST = edict()
-config.TEST.RECALL = []
-config.TEST.TIOU = []
-config.TEST.NMS_THRESH = 0.4
-config.TEST.INTERVAL = 1
-config.TEST.EVAL_TRAIN = False
-config.TEST.BATCH_SIZE = 1
-config.TEST.TOP_K = 10
+cfg.TEST = edict()
+cfg.TEST.RECALL = []
+cfg.TEST.TIOU = []
+cfg.TEST.NMS_THRESH = 0.4
+cfg.TEST.BATCH_SIZE = 1
+cfg.TEST.TOP_K = 10
+cfg.TEST.EVAL_TRAIN = False
 
 def _update_dict(cfg, value):
     for k, v in value.items():
         if k in cfg:
-            if k == 'PARAMS':
+            if 'PARAMS' in k:
                 cfg[k] = v
             elif isinstance(v, dict):
                 _update_dict(cfg[k],v)
@@ -98,10 +107,10 @@ def update_config(config_file):
     with open(config_file) as f:
         exp_config = edict(yaml.load(f, Loader=yaml.FullLoader))
         for k, v in exp_config.items():
-            if k in config:
+            if k in cfg:
                 if isinstance(v, dict):
-                    _update_dict(config[k], v)
+                    _update_dict(cfg[k], v)
                 else:
-                    config[k] = v
+                    cfg[k] = v
             else:
                 raise ValueError("{} not exist in config.py".format(k))

@@ -1,2 +1,3 @@
-from .sparse import SparsePropMaxPool, SparsePropConv
-from .dense import PropMaxPool
+from .multiscale import *
+from .dense import *
+from .sparse import *
