@@ -5,6 +5,7 @@ The core idea is to retrieve a moment from two-dimensional temporal maps at diff
 The extended version is capable of encoding adjacent temporal relation at different scales, while learning discriminative features for matching video moments with referring expressions. 
 Our model is  simple  in  design  and  achieves  competitive  performance in  comparison  with  the  state-of-the-art  methods  on  three benchmark datasets.
 
+[Arxiv Preprint](https://arxiv.org/abs/2012.02646)
 ## Framework
 ![alt text](pipeline.jpg)
 
