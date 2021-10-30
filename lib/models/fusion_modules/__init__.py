@@ -1,1 +1,1 @@
-from .base_fusion import BaseFusion
+from .video_text_fusion import *

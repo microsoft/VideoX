@@ -1,1 +1,1 @@
-from models.tan import TAN
+from models.TAN import *
