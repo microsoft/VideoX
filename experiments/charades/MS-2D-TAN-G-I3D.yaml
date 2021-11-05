@@ -6,7 +6,7 @@ LOG_DIR: ./log
 
 DATASET:
   NAME: charades
-  DATA_DIR: data/Charades
+  DATA_DIR: data/Charades-STA
   VIS_INPUT_TYPE: charades_i3d_rgb_25fps
   TXT_INPUT_TYPE: glove
   NO_VAL: True
