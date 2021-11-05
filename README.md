@@ -56,24 +56,24 @@ Please download the data from [box](https://rochester.box.com/s/swu6rlqcdlebvwml
 Run the following commands for training:
 #### Table 1
 ```
-python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-VGG.yaml --verbose
-python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-C3D.yaml --verbose
-python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-I3D.yaml --verbose
-python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-I3D-Finetuned.yaml --verbose
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-VGG.yaml --verbose --tag base
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-C3D.yaml --verbose --tag base
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-I3D.yaml --verbose --tag base
+python moment_localization/run.py --cfg experiments/charades/MS-2D-TAN-G-I3D-Finetuned.yaml --verbose --tag base
 ```
 #### Table 2
 ```
-python moment_localization/run.py --cfg experiments/activitynet/MS-2D-TAN-G-C3D.yaml --verbose
-python moment_localization/run.py --cfg experiments/activitynet/MS-2D-TAN-G-I3D.yaml --verbose
+python moment_localization/run.py --cfg experiments/activitynet/MS-2D-TAN-G-C3D.yaml --verbose --tag base
+python moment_localization/run.py --cfg experiments/activitynet/MS-2D-TAN-G-I3D.yaml --verbose --tag base
 ```
 #### Table 3
 
 ```
-python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-VGG.yaml --verbose
-python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-C3D.yaml --verbose
-python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D.yaml --verbose
-python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-C3D-H512N512K5A8k9L2.yaml --verbose
-python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D-H512N512K5A8k9L2.yaml --verbose
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-VGG.yaml --verbose --tag base
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-C3D.yaml --verbose --tag base
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D.yaml --verbose --tag base
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-C3D-H512N512K5A8k9L2.yaml --verbose --tag base
+python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D-H512N512K5A8k9L2.yaml --verbose --tag base
 ```
 
 ### Evaluation
