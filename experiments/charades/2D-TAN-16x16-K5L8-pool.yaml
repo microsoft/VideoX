@@ -3,7 +3,7 @@ WORKERS: 16
 MODEL_DIR: ./checkpoints
 RESULT_DIR: ./results
 LOG_DIR: ./log
-DATA_DIR: ./data/Charades-STA
+DATA_DIR: ./data/Charades
 
 DATASET:
   NAME: Charades
