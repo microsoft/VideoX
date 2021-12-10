@@ -102,7 +102,7 @@ def recover_to_single_map(joint_probs):
         dilation = map_size//scale_num_clips
         for i in range(scale_num_anchors):
             score_map[...,:map_size//dilation*dilation:dilation,(i+1)*dilation-1] = torch.max(
-                score_map[...,:map_size//dilation*dilation:dilation,(i+1)*dilation-1], prob[...,i])
+                score_map[...,:map_size//dilation*dilation:dilation,(i+1)*dilation-1].clone(), prob[...,i])
     return score_map
 
 def upsample_to_single_map(joint_probs):
