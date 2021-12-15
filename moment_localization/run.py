@@ -201,6 +201,7 @@ def train_epoch(train_loader, model, optimizer, verbose=False):
         pbar.close()
 
     annotations = train_loader.dataset.annotations
+    annotations = [annotations[key] for key in sorted(sorted_segments_dict.keys())]
     sorted_segments = [sorted_segments_dict[key] for key in sorted(sorted_segments_dict.keys())]
     result = eval.evaluate(sorted_segments, annotations)
 
@@ -229,6 +230,7 @@ def test_epoch(test_loader, model, verbose=False, save_results=False):
     if verbose:
         pbar.close()
     annotations = test_loader.dataset.annotations
+    annotations = [annotations[key] for key in sorted(sorted_segments_dict.keys())]
     sorted_segments = [sorted_segments_dict[key] for key in sorted(sorted_segments_dict.keys())]
     saved_dict = [saved_dict[key] for key in sorted(saved_dict.keys())]
     if save_results:
