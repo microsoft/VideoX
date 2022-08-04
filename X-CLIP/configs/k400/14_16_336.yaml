@@ -1,0 +1,15 @@
+DATA:
+    ROOT: '/PATH/TO/videos'
+    TRAIN_FILE: '/PATH/TO/train.txt'
+    VAL_FILE: '/PATH/TO/val.txt'
+    DATASET: kinetics400
+    NUM_FRAMES: 16
+    NUM_CLASSES: 400
+    LABEL_LIST: 'labels/kinetics_400_labels.csv'
+    INPUT_SIZE: 336
+MODEL:
+    ARCH: ViT-L/14@336px
+TRAIN:
+    BATCH_SIZE: 1
+    ACCUMULATION_STEPS: 32
+    USE_CHECKPOINT: True

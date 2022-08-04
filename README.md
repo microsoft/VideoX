@@ -2,6 +2,8 @@
 
 ***This is a collection of our video understanding work***
 
+> [**X-CLIP**](./X-CLIP) (```@ECCV'22 Oral```): **Expanding Language-Image Pretrained Models for General Video Recognition**
+
 > [**MS-2D-TAN**](./MS-2D-TAN) (```@TPAMI'21```): **Multi-Scale 2D Temporal Adjacent Networks for Moment Localization with Natural Language**
 
 > [**2D-TAN**](./2D-TAN) (```@AAAI'20```): **Learning 2D Temporal Adjacent Networks for Moment Localization with Natural Language**
@@ -9,6 +11,8 @@
 ## News
 
 - :sunny: Hiring research interns: houwen.peng@microsoft.com
+- :boom: Aug, 2022: Code for [**X-CLIP**](./X-CLIP) is now released.
+- :boom: Jul, 2022: [**X-CLIP**](./X-CLIP) was accepted to ECCV'22 as Oral
 - :boom: Oct, 2021: Code for [**MS-2D-TAN**](./MS-2D-TAN) is now released.
 - :boom: Sep, 2021: [**MS-2D-TAN**](./MS-2D-TAN) was accepted to TPAMI'21
 - :boom: Dec, 2019: Code for [**2D-TAN**](./2D-TAN) is now released.
@@ -16,6 +20,14 @@
 
 ## Works
 
+
+### [X-CLIP](./X-CLIP)
+
+In this paper, we propose a new video recognition framework which adapts the pretrained language-image models to video recognition. Specifically, to capture the temporal information, we propose a cross-frame attention mechanism that explicitly exchanges information across frames. To utilize the text information in video categories, we design a video-specific prompting technique which can yield instance-level discriminative textual representation. Extensive experiments demonstrate that our approach is effective and can be generalized to different video recognition scenarios, including fully-supervised, few-shot and zero-shot.
+
+<div align="center">
+    <img width="70%" alt="X-CLIP overview" src="./X-CLIP/.figures/overview.png"/>
+</div>
 
 ### [MS-2D-TAN](./MS-2D-TAN)
 
@@ -36,6 +48,14 @@ In this paper, we study the problem of moment localization with natural language
 ## Bibtex
 
 ```bibtex
+@InProceedings{XCLIP,
+  title={Expanding Language-Image Pretrained Models for General Video Recognition},
+  author={Ni, Bolin and Peng, Houwen and Chen, Minghao and Zhang, Songyang and Meng, Gaofeng and Fu, Jianlong and Xiang, Shiming and Ling, Haibin},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2022}
+}
+
+
 @InProceedings{Zhang2021MS2DTAN,
     author = {Zhang, Songyang and Peng, Houwen and Fu, Jianlong and Lu, Yijuan and Luo, Jiebo},
     title = {Multi-Scale 2D Temporal Adjacent Networks for Moment Localization with Natural Language},

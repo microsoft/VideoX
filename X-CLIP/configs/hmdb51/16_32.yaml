@@ -1,0 +1,15 @@
+DATA:
+    ROOT: '/PATH/TO/videos'
+    TRAIN_FILE: '/PATH/TO/train.txt'
+    VAL_FILE: '/PATH/TO/val.txt'
+    DATASET: hmdb51
+    NUM_FRAMES: 32
+    NUM_CLASSES: 51
+    LABEL_LIST: 'labels/hmdb_51_labels.csv'
+MODEL:
+    ARCH: ViT-B/16
+TRAIN:
+    BATCH_SIZE: 4
+    ACCUMULATION_STEPS: 2
+    EPOCHS: 50
+    LR: 2.e-6
