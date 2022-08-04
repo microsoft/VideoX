@@ -1,0 +1,81 @@
+WORKERS: 16
+MODEL_DIR: ./checkpoints
+RESULT_DIR: ./results
+LOG_DIR: ./log
+DATA_DIR: ./data/TACoS
+
+DATASET:
+  NAME: TACoS
+  VIS_INPUT_TYPE: c3d
+  NO_VAL: True
+  NUM_SAMPLE_CLIPS: 256
+  TARGET_STRIDE: 2
+  NORMALIZE: True
+  RANDOM_SAMPLING: False
+
+TEST:
+  BATCH_SIZE: 32
+  RECALL: 1,5
+  TIOU: 0.1,0.3,0.5,0.7
+  EVAL_TRAIN: False
+  NMS_THRESH: 0.5
+
+CUDNN:
+  DETERMINISTIC: False
+  BENCHMARK: True
+
+TRAIN:
+  BATCH_SIZE: 32
+  LR: 0.0001
+  WEIGHT_DECAY: 0.0000
+  MAX_EPOCH: 100
+  CONTINUE: False
+
+LOSS:
+  NAME: bce_rescale_loss
+  PARAMS:
+    MIN_IOU: 0.3
+    MAX_IOU: 0.7
+    BIAS: 0.0
+
+TAN:
+
+  FRAME_MODULE:
+    NAME: FrameAvgPool
+    PARAMS:
+      INPUT_SIZE: 4096
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 2
+      STRIDE: 2
+
+  PROP_MODULE:
+    NAME: SparsePropConv
+    PARAMS:
+      HIDDEN_SIZE: 512
+      NUM_SCALE_LAYERS: [16,8,8,8]
+
+  FUSION_MODULE:
+    NAME: BaseFusion
+    PARAMS:
+      HIDDEN_SIZE: 512
+      TXT_INPUT_SIZE: 300
+      TXT_HIDDEN_SIZE: 512
+      LSTM:
+        NUM_LAYERS: 3
+        BIDIRECTIONAL: False
+
+  MAP_MODULE:
+    NAME: MapConv
+    PARAMS:
+      INPUT_SIZE: 512
+      HIDDEN_SIZES: [512, 512, 512, 512, 512, 512, 512, 512]
+      KERNEL_SIZES: [5, 5, 5, 5, 5, 5, 5, 5]
+      STRIDES: [1, 1, 1, 1, 1, 1, 1, 1]
+      PADDINGS: [16, 0, 0, 0, 0, 0, 0, 0]
+      DILATIONS: [1, 1, 1, 1, 1, 1, 1, 1]
+
+  PRED_INPUT_SIZE: 512
+
+MODEL:
+  NAME: TAN
+  CHECKPOINT: ./checkpoints/TACoS/iter016165-0.4644-0.7443.pkl

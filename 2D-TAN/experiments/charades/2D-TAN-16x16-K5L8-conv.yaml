@@ -1,0 +1,82 @@
+WORKERS: 16
+
+MODEL_DIR: ./checkpoints
+RESULT_DIR: ./results
+LOG_DIR: ./log
+DATA_DIR: ./data/Charades-STA
+
+DATASET:
+  NAME: Charades
+  VIS_INPUT_TYPE: vgg_rgb
+  NO_VAL: True
+  NUM_SAMPLE_CLIPS: 256
+  TARGET_STRIDE: 16
+  NORMALIZE: True
+  RANDOM_SAMPLING: False
+
+CUDNN:
+  DETERMINISTIC: False
+  BENCHMARK: True
+
+TRAIN:
+  BATCH_SIZE: 32
+  LR: 0.0001
+  WEIGHT_DECAY: 0.0000
+  MAX_EPOCH: 100
+  CONTINUE: False
+
+LOSS:
+  NAME: bce_rescale_loss
+  PARAMS:
+    MIN_IOU: 0.5
+    MAX_IOU: 1.0
+    BIAS: 0.0
+
+TEST:
+  BATCH_SIZE: 32
+  RECALL: 1,5
+  TIOU: 0.5,0.7
+  EVAL_TRAIN: True
+  NMS_THRESH: 0.5
+
+TAN:
+
+  FRAME_MODULE:
+    NAME: FrameAvgPool
+    PARAMS:
+      INPUT_SIZE: 4096
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 16
+      STRIDE: 16
+
+  PROP_MODULE:
+    NAME: SparsePropConv
+    PARAMS:
+      HIDDEN_SIZE: 512
+      NUM_SCALE_LAYERS: [16]
+
+  FUSION_MODULE:
+    NAME: BaseFusion
+    PARAMS:
+      HIDDEN_SIZE: 512
+      TXT_INPUT_SIZE: 300
+      TXT_HIDDEN_SIZE: 512
+      LSTM:
+        NUM_LAYERS: 3
+        BIDIRECTIONAL: False
+
+  MAP_MODULE:
+    NAME: MapConv
+    PARAMS:
+      INPUT_SIZE: 512
+      HIDDEN_SIZES: [512, 512, 512, 512, 512, 512, 512, 512]
+      KERNEL_SIZES: [5, 5, 5, 5, 5, 5, 5, 5]
+      STRIDES: [1, 1, 1, 1, 1, 1, 1, 1]
+      PADDINGS: [16, 0, 0, 0, 0, 0, 0, 0]
+      DILATIONS: [1, 1, 1, 1, 1, 1, 1, 1]
+
+  PRED_INPUT_SIZE: 512
+
+MODEL:
+  NAME: TAN
+  CHECKPOINT: ./checkpoints/Charades/iter005418-0.4277-0.8062.pkl
