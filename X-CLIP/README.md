@@ -1,13 +1,18 @@
 
 # [ECCV'2022 Oral] - Expanding Language-Image Pretrained Models for General Video Recognition
-> [**Expanding Language-Image Pretrained Models for General Video Recognition**]()<br>
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/action-classification-on-kinetics-400)](https://paperswithcode.com/sota/action-classification-on-kinetics-400?p=expanding-language-image-pretrained-models)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/action-classification-on-kinetics-600)](https://paperswithcode.com/sota/action-classification-on-kinetics-600?p=expanding-language-image-pretrained-models)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/zero-shot-action-recognition-on-kinetics)](https://paperswithcode.com/sota/zero-shot-action-recognition-on-kinetics?p=expanding-language-image-pretrained-models)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/zero-shot-action-recognition-on-hmdb51)](https://paperswithcode.com/sota/zero-shot-action-recognition-on-hmdb51?p=expanding-language-image-pretrained-models)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/zero-shot-action-recognition-on-ucf101)](https://paperswithcode.com/sota/zero-shot-action-recognition-on-ucf101?p=expanding-language-image-pretrained-models)
+> [**Expanding Language-Image Pretrained Models for General Video Recognition**](https://arxiv.org/abs/2208.02816)<br>
 > accepted by ECCV 2022 as an oral presentation<br>
 > Bolin Ni, [Houwen Peng](https://houwenpeng.com/), Minghao Chen, [Songyang Zhang](https://sy-zhang.github.io/), [Gaofeng Meng](https://people.ucas.ac.cn/~gfmeng), [Jianlong Fu](https://jianlong-fu.github.io/), [Shiming Xiang](https://people.ucas.ac.cn/~xiangshiming), [Haibin Ling](https://www3.cs.stonybrook.edu/~hling/)
 
-[[arxiv]]()
+[[arxiv]](https://arxiv.org/abs/2208.02816)
 [[slides]]()
 
-This is an official implementation of [X-CLIP](), a new framework adapting language-image foundation models to general video recognition. 
+This is an official implementation of [X-CLIP](https://arxiv.org/abs/2208.02816), a new framework adapting language-image foundation models to general video recognition. 
 
 - Recognition with closed-set categories
     <table>
