@@ -10,7 +10,7 @@
 
 ## News
 
-- :sunny: Hiring research interns: houwen.peng@microsoft.com
+- :sunny: Hiring research interns with strong coding skills at MSRA: houwen.peng@microsoft.com
 - :boom: Aug, 2022: Code for [**X-CLIP**](./X-CLIP) is now released.
 - :boom: Jul, 2022: [**X-CLIP**](./X-CLIP) was accepted to ECCV'22 as Oral
 - :boom: Oct, 2021: Code for [**MS-2D-TAN**](./MS-2D-TAN) is now released.
