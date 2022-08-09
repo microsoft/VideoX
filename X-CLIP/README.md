@@ -17,21 +17,20 @@ This is an official implementation of [X-CLIP](https://arxiv.org/abs/2208.02816)
 - Recognition with closed-set categories
     <table>
         <tr>
-            <td ><center><img width="100%" alt="" src=".figures/dog_.gif"/></center></td>
-            <td ><center><img width="100%" alt="" src=".figures/wheel_.gif"/></center></td>
-            <td ><center><img width="100%" alt="" src=".figures/cake_.gif"/></center></td>
+            <td ><center><img width="100%" alt="" src="https://github.com/nbl97/X-CLIP_Model_Zoo/releases/download/v1.0/dog_.gif"/></center></td>
+            <td ><center><img width="100%" alt="" src="https://github.com/nbl97/X-CLIP_Model_Zoo/releases/download/v1.0/wheel_.gif"/></center></td>
+            <td ><center><img width="100%" alt="" src="https://github.com/nbl97/X-CLIP_Model_Zoo/releases/download/v1.0/cake_.gif"/></center></td>
         </tr>
     </table>
 
 - Recognition with open-set categories
     <table>
         <tr>
-            <td ><center><img width="100%" alt="" src=".figures/dogs_.gif"/></center></td>
-            <td ><center><img width="100%" alt="" src=".figures/math_.gif"/></center></td>
-            <td ><center><img width="100%" alt="" src=".figures/dunk_.gif"/></center></td>
+            <td ><center><img width="100%" alt="" src="https://github.com/nbl97/X-CLIP_Model_Zoo/releases/download/v1.0/dogs_.gif"/></center></td>
+            <td ><center><img width="100%" alt="" src="https://github.com/nbl97/X-CLIP_Model_Zoo/releases/download/v1.0/math_.gif"/></center></td>
+            <td ><center><img width="100%" alt="" src="https://github.com/nbl97/X-CLIP_Model_Zoo/releases/download/v1.0/dunk_.gif"/></center></td>
         </tr>
     </table>
-<!-- The videos and closed-set categories are chosen from Kinetics-400. For each video, we recognize it among the confusing categories rather than all 400 categories. The open-set categories are constructed manually to further show the powerful generalizability.  -->
 
 # News
 - :eyes: [Houwen Peng](https://houwenpeng.com/) is hiring research interns. Contact: [houwen.peng@microsoft.com](houwen.peng@microsoft.com)
