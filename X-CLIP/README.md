@@ -1,5 +1,6 @@
 
-# [ECCV'2022 Oral] - Expanding Language-Image Pretrained Models for General Video Recognition
+# [ECCV'2022 Oral] - Expanding Language-Image Pretrained Models for General Video Recognition [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=CLIP%20for%20Video!!&url=https://github.com/microsoft/VideoX/edit/master/X-CLIP&via=houwen_peng&hashtags=CLIP,Kinetics,vision_transformer,zero_shot)
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/action-classification-on-kinetics-400)](https://paperswithcode.com/sota/action-classification-on-kinetics-400?p=expanding-language-image-pretrained-models)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/action-classification-on-kinetics-600)](https://paperswithcode.com/sota/action-classification-on-kinetics-600?p=expanding-language-image-pretrained-models)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/zero-shot-action-recognition-on-kinetics)](https://paperswithcode.com/sota/zero-shot-action-recognition-on-kinetics?p=expanding-language-image-pretrained-models)
