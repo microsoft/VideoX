@@ -91,6 +91,7 @@ We provide the following two ways to organize the dataset:
     a.mp4
     b.mp4
     ```
+    The `train.txt` and `val.txt` are prepared in the same way as option \#1.
 
 Since that our method employs semantic information in text labels, rather than traditional one-hot label, it is necessary to provide a textual description for each video category. For example, we provide the text description of Kinetics-400 in the file `labels/kinetics_400_labels.csv`. Here is the format:
 ```Shell
