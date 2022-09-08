@@ -1,4 +1,4 @@
-# VideoX - Multi-modal Video Content Understanding [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20new%20collection%20of%20video%20cross-modal%20models.&url=https://github.com/microsoft/VideoX&via=houwen_peng&hashtags=Video,CLIP,Video_Text)
+# VideoX - Multi-modal Video Content Understanding [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/models?other=xclip) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20new%20collection%20of%20video%20cross-modal%20models.&url=https://github.com/microsoft/VideoX&via=houwen_peng&hashtags=Video,CLIP,Video_Text)
 
 ***This is a collection of our video understanding work***
 
