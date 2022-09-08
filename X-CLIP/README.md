@@ -6,6 +6,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/zero-shot-action-recognition-on-kinetics)](https://paperswithcode.com/sota/zero-shot-action-recognition-on-kinetics?p=expanding-language-image-pretrained-models)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/zero-shot-action-recognition-on-hmdb51)](https://paperswithcode.com/sota/zero-shot-action-recognition-on-hmdb51?p=expanding-language-image-pretrained-models)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/zero-shot-action-recognition-on-ucf101)](https://paperswithcode.com/sota/zero-shot-action-recognition-on-ucf101?p=expanding-language-image-pretrained-models)
+[![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/models?other=xclip)
 > [**Expanding Language-Image Pretrained Models for General Video Recognition**](https://arxiv.org/abs/2208.02816)<br>
 > accepted by ECCV 2022 as an oral presentation<br>
 > Bolin Ni, [Houwen Peng](https://houwenpeng.com/), Minghao Chen, [Songyang Zhang](https://sy-zhang.github.io/), [Gaofeng Meng](https://people.ucas.ac.cn/~gfmeng), [Jianlong Fu](https://jianlong-fu.github.io/), [Shiming Xiang](https://people.ucas.ac.cn/~xiangshiming), [Haibin Ling](https://www3.cs.stonybrook.edu/~hling/)
@@ -35,6 +36,7 @@ This is an official implementation of [X-CLIP](https://arxiv.org/abs/2208.02816)
 
 # News
 - :eyes: [Houwen Peng](https://houwenpeng.com/) is hiring research interns. Contact: [houwen.peng@microsoft.com](houwen.peng@microsoft.com)
+- :sparkles: **[Sep, 2022]** The models are now integrated into [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/models?other=xclip)
 - :sparkles: **[July, 2022]** The code and pretrained models of X-CLIP have been released, including fully-supervised, few-shot and zero-shot settings. Thanks for your star :stuck_out_tongue_closed_eyes:
 - :sparkles: **[July, 2022]** Our paper has been accepted by ECCV2022 (**Oral**).
 
