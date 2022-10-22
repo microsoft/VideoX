@@ -53,7 +53,7 @@ Please use these results when comparing with our AAAI paper.
 
 ## Quick Start
 
-Please download the visual features from [box drive](https://rochester.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav) and save it to the `data/` folder. 
+Please download the visual features from [box](https://rochester.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav) or [dropbox](https://www.dropbox.com/sh/dszrtb85nua2jqe/AABGAEQhPtqBIRpGPY3gZey6a?dl=0) and save it to the `data/` folder. 
 
 
 #### Training
@@ -76,7 +76,7 @@ python moment_localization/train.py --cfg experiments/tacos/2D-TAN-128x128-K5L8-
 ```
 
 #### Testing
-Our trained model are provided in [box drive](https://rochester.box.com/s/5cfp7a5snvl9uky30bu7mn1cb381w91v). Please download them to the `checkpoints` folder.
+Our trained model are provided in [box](https://rochester.box.com/s/5cfp7a5snvl9uky30bu7mn1cb381w91v) or [dropbox](https://www.dropbox.com/sh/27i8wvwk9cw521f/AAA4FJVDFVQZSjBoWC2x8NAIa?dl=0). Please download them to the `checkpoints` folder.
 
 Then, run the following commands for evaluation: 
 ```
