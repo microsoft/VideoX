@@ -50,7 +50,7 @@ Our model is  simple  in  design  and  achieves  competitive  performance in  co
 
 ### Download Datasets
 
-Please download the data from [box](https://rochester.box.com/s/swu6rlqcdlebvwml8dyescmi7ra0owc5) or [baidu](https://pan.baidu.com/s/1pwo6lK71_ebit_hWykvgqQ?pwd=1mw4) and save it to the `data` folder. 
+Please download the data from [box](https://rochester.box.com/s/swu6rlqcdlebvwml8dyescmi7ra0owc5), [dropbox](https://www.dropbox.com/sh/74umzvldbm32pmf/AACHaAJLrM5RaOsaDhPTcOqGa?dl=0) or [baidu](https://pan.baidu.com/s/1pwo6lK71_ebit_hWykvgqQ?pwd=1mw4) and save it to the `data` folder. 
 
 ### Training
 Run the following commands for training:
@@ -78,7 +78,7 @@ python moment_localization/run.py --cfg experiments/tacos/MS-2D-TAN-G-I3D-H512N5
 
 ### Evaluation
 
-Download all the trained model from [box](https://rochester.box.com/s/pvfgay9e90cdvke5qpktewzl99g3l8o9) or [baidu](https://pan.baidu.com/s/1TGOlQyeppMvVSjNy_LiF5w?pwd=28i2) and save them to the `release_checkpoints` folder.
+Download all the trained model from [box](https://rochester.box.com/s/pvfgay9e90cdvke5qpktewzl99g3l8o9), [dropbox](https://www.dropbox.com/sh/coa8hcjsxv6dvx6/AAAMQL-wIjMmRGN-Hx6ktI-ga?dl=0) or [baidu](https://pan.baidu.com/s/1TGOlQyeppMvVSjNy_LiF5w?pwd=28i2) and save them to the `release_checkpoints` folder.
 
 Then, run the following commands to evaluate our trained models:
 
