@@ -12,7 +12,7 @@
 > Bolin Ni, [Houwen Peng](https://houwenpeng.com/), Minghao Chen, [Songyang Zhang](https://sy-zhang.github.io/), [Gaofeng Meng](https://people.ucas.ac.cn/~gfmeng), [Jianlong Fu](https://jianlong-fu.github.io/), [Shiming Xiang](https://people.ucas.ac.cn/~xiangshiming), [Haibin Ling](https://www3.cs.stonybrook.edu/~hling/)
 
 [[arxiv]](https://arxiv.org/abs/2208.02816)
-[[slides]]()
+[[slides]](https://github.com/nbl97/X-CLIP_Model_Zoo/releases/download/v1.0/xclip-slides.pptx)
 
 This is an official implementation of [X-CLIP](https://arxiv.org/abs/2208.02816), a new framework adapting language-image foundation models to general video recognition. 
 
