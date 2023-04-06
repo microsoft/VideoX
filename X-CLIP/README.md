@@ -9,7 +9,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/expanding-language-image-pretrained-models/zero-shot-action-recognition-on-ucf101)](https://paperswithcode.com/sota/zero-shot-action-recognition-on-ucf101?p=expanding-language-image-pretrained-models)
 > [**Expanding Language-Image Pretrained Models for General Video Recognition**](https://arxiv.org/abs/2208.02816)<br>
 > accepted by ECCV 2022 as an oral presentation<br>
-> Bolin Ni, [Houwen Peng](https://houwenpeng.com/), Minghao Chen, [Songyang Zhang](https://sy-zhang.github.io/), [Gaofeng Meng](https://people.ucas.ac.cn/~gfmeng), [Jianlong Fu](https://jianlong-fu.github.io/), [Shiming Xiang](https://people.ucas.ac.cn/~xiangshiming), [Haibin Ling](https://www3.cs.stonybrook.edu/~hling/)
+> Bolin Ni, [Houwen Peng](https://houwenpeng.com/), [Minghao Chen](https://silent-chen.github.io/), [Songyang Zhang](https://sy-zhang.github.io/), [Gaofeng Meng](https://people.ucas.ac.cn/~gfmeng), [Jianlong Fu](https://jianlong-fu.github.io/), [Shiming Xiang](https://people.ucas.ac.cn/~xiangshiming), [Haibin Ling](https://www3.cs.stonybrook.edu/~hling/)
 
 [[arxiv]](https://arxiv.org/abs/2208.02816)
 [[slides]](https://github.com/nbl97/X-CLIP_Model_Zoo/releases/download/v1.0/xclip-slides.pptx)
