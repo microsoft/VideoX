@@ -1,6 +1,7 @@
 # VideoX - Multi-modal Video Content Understanding [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/models?other=xclip) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20new%20collection%20of%20video%20cross-modal%20models.&url=https://github.com/microsoft/VideoX&via=houwen_peng&hashtags=Video,CLIP,Video_Text)
 
 ***This is a collection of our video understanding work***
+> [**SeqTrack**](./SeqTrack) (```@CVPR'23```): **SeqTrack: Sequence to Sequence Learning for Visual Object Tracking**
 
 > [**X-CLIP**](./X-CLIP) (```@ECCV'22 Oral```): **Expanding Language-Image Pretrained Models for General Video Recognition**
 
@@ -11,6 +12,8 @@
 ## News
 
 - :sunny: Hiring research interns with strong coding skills at MSRA: houwen.peng@microsoft.com
+- :boom: Apr, 2022: Code for [**SeqTrack**](./SeqTrack) is now released.
+- :boom: Feb, 2022: [**SeqTrack**](./SeqTrack) was accepted to CVPR'23
 - :boom: Sep, 2022: [**X-CLIP**](./X-CLIP) is now integrated into [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/models?other=xclip)
 - :boom: Aug, 2022: Code for [**X-CLIP**](./X-CLIP) is now released.
 - :boom: Jul, 2022: [**X-CLIP**](./X-CLIP) was accepted to ECCV'22 as Oral
@@ -21,6 +24,13 @@
 
 ## Works
 
+### [SeqTrack](./SeqTrack)
+
+In this paper, we propose a new sequence-to-sequence learning framework for visual tracking, dubbed SeqTrack. It casts visual tracking as a sequence generation problem, which predicts object bounding boxes in an autoregressive fashion. SeqTrack only adopts a simple encoder-decoder transformer architecture. The encoder extracts visual features with a bidirectional transformer, while the decoder generates a sequence of bounding box values autoregressively with a causal decoder. The loss function is a plain cross-entropy. Such a sequence learning paradigm not only simplifies tracking framework, but also achieves competitive performance on many benchmarks.
+
+<div align="center">
+    <img width="70%" alt="SeqTrack overview" src="./SeqTrack/tracking/Framework.png"/>
+</div>
 
 ### [X-CLIP](./X-CLIP)
 
@@ -49,6 +59,13 @@ In this paper, we study the problem of moment localization with natural language
 ## Bibtex
 
 ```bibtex
+@InProceedings{SeqTrack,
+  title={SeqTrack: Sequence to Sequence Learning for Visual Object Tracking},
+  author={Chen, Xin and Peng, Houwen and Wang, Dong and Lu, Huchuan and Hu, Han},
+  booktitle={CVPR},
+  year={2023}
+}
+
 @InProceedings{XCLIP,
   title={Expanding Language-Image Pretrained Models for General Video Recognition},
   author={Ni, Bolin and Peng, Houwen and Chen, Minghao and Zhang, Songyang and Meng, Gaofeng and Fu, Jianlong and Xiang, Shiming and Ling, Haibin},

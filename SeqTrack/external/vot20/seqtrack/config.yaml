@@ -1,0 +1,10 @@
+registry:
+- ./seqtrack_b256_ar.ini
+- ./seqtrack_b384_ar.ini
+- ./seqtrack_l256_ar.ini
+- ./seqtrack_l384_ar.ini
+- ./seqtrack_b256.ini
+- ./seqtrack_b384.ini
+- ./seqtrack_l256.ini
+- ./seqtrack_l384.ini
+stack: vot2020

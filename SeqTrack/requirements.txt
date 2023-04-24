@@ -1,0 +1,17 @@
+PyYAML
+easydict
+cython
+opencv-python
+pandas
+tqdm
+pycocotools
+jpeg4py
+tb-nightly
+tikzplotlib
+colorama
+lmdb
+scipy
+visdom
+git+https://github.com/votchallenge/vot-toolkit-python
+timm
+yacs
