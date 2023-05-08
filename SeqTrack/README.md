@@ -10,7 +10,7 @@
 
 > [**SeqTrack: Sequence to Sequence Learning for Visual Object Tracking**](https://arxiv.org/abs/2304.14394)<br>
 > accepted by CVPR2023<br>
-> Xin Chen(https://scholar.google.com.hk/citations?user=A04HWTIAAAAJ&hl=zh-CN&oi=sr), [Houwen Peng](https://houwenpeng.com/), [Dong Wang](https://silent-chen.github.io/), [Huchuan Lu](https://ice.dlut.edu.cn/lu/), [Han Hu](https://ancientmooner.github.io/
+> [Xin Chen](https://scholar.google.com.hk/citations?user=A04HWTIAAAAJ&hl=zh-CN&oi=sr), [Houwen Peng](https://houwenpeng.com/), [Dong Wang](https://silent-chen.github.io/), [Huchuan Lu](https://ice.dlut.edu.cn/lu/), [Han Hu](https://ancientmooner.github.io/
 )
 
 
