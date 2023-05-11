@@ -15,10 +15,6 @@ def parse_args():
                         help="train on single gpu or multiple gpus")
     parser.add_argument('--nproc_per_node', type=int, help="number of GPUs per node")  # specify when mode is multiple
     parser.add_argument('--use_lmdb', type=int, choices=[0, 1], default=0)  # whether datasets are in lmdb format
-    # for knowledge distillation
-    parser.add_argument('--distill', type=int, choices=[0, 1], default=0)  # whether to use knowledge distillation
-    parser.add_argument('--script_teacher', type=str, help='teacher script name')
-    parser.add_argument('--config_teacher', type=str, help='teacher yaml configure file name')
 
     args = parser.parse_args()
 
