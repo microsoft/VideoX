@@ -32,6 +32,7 @@ The model weights and the corresponding training logs are also given by the link
     <td>67.6</td>
     <td>69.2</td>
     <td><a href="https://drive.google.com/drive/folders/10PKs6aqSbVtb6aloYmtaN4aKMnmPF58P?usp=sharing">model</a></td>
+    <td><a href="https://drive.google.com/drive/folders/1_kf2noaP3M9RHHCgG6XqBFejNkzBv2xB?usp=sharing">log</a></td>
   </tr>
   <tr>
     <td>SeqTrack-B384</td>
@@ -45,6 +46,7 @@ The model weights and the corresponding training logs are also given by the link
     <td>66.7</td>
     <td>68.6</td>
     <td><a href="https://drive.google.com/drive/folders/10PKs6aqSbVtb6aloYmtaN4aKMnmPF58P?usp=sharing">model</a></td>
+    <td><a href="https://drive.google.com/drive/folders/1_kf2noaP3M9RHHCgG6XqBFejNkzBv2xB?usp=sharing">log</a></td>
   </tr>
   <tr>
     <td>SeqTrack-L256</td>
@@ -58,6 +60,7 @@ The model weights and the corresponding training logs are also given by the link
     <td>66.9</td>
     <td>69.7</td>
     <td><a href="https://drive.google.com/drive/folders/10PKs6aqSbVtb6aloYmtaN4aKMnmPF58P?usp=sharing">model</a></td>
+    <td><a href="https://drive.google.com/drive/folders/1_kf2noaP3M9RHHCgG6XqBFejNkzBv2xB?usp=sharing">log</a></td>
   </tr>
   <tr>
     <td>SeqTrack-L384</td>
@@ -71,6 +74,7 @@ The model weights and the corresponding training logs are also given by the link
     <td>66.2</td>
     <td>68.5</td>
     <td><a href="https://drive.google.com/drive/folders/10PKs6aqSbVtb6aloYmtaN4aKMnmPF58P?usp=sharing">model</a></td>
+    <td><a href="https://drive.google.com/drive/folders/1_kf2noaP3M9RHHCgG6XqBFejNkzBv2xB?usp=sharing">log</a></td>
   </tr>
     
 
