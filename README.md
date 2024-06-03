@@ -11,7 +11,7 @@
 
 ## News
 
-- :sunny: Hiring research interns with strong coding skills at MSRA: houwen.peng@microsoft.com
+- :sunny: Hiring research interns with strong coding skills: henry.hw.peng@gmail.com | penghouwen@icloud.com
 - :boom: Apr, 2023: Code for [**SeqTrack**](./SeqTrack) is now released.
 - :boom: Feb, 2023: [**SeqTrack**](./SeqTrack) was accepted to CVPR'23
 - :boom: Sep, 2022: [**X-CLIP**](./X-CLIP) is now integrated into [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/models?other=xclip)
